@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Portafolio | Sara Milena</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/2193d055c9.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">SM</div>
+    <nav>
+      <a onclick="goTo('inicio')">Inicio</a>
+      <a onclick="goTo('habilidades')">Habilidades</a>
+      <a onclick="goTo('proyectos')">Proyectos</a>
+      <a onclick="goTo('contacto')">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="inicio" class="section inicio">
+    <div class="hero-container">
+        <div class="hero-text">
+            <span class="badge">6to Semestre • Ingeniería de Sistemas</span>
+            <h1>Hola, soy <span>Sara Malaver</span></h1>
+            <h2>Desarrolladora apasionada por <span class="typewriter"></span></h2>
+            <p>
+                Actualmente curso mi sexto semestre de Ingeniería de Sistemas. Me especializo en crear soluciones 
+                eficientes combinando lógica de backend con interfaces modernas. Tengo experiencia trabajando 
+                con el ecosistema de <strong>Java, Spring Boot, Python y Angular</strong>.
+            </p>
+            
+            <div class="hero-actions">
+                <button class="btn-main" onclick="goTo('proyectos')">Ver Proyectos</button>
+                <div class="social-links">
+                    <a href="https://github.com/saramalaver19-svg"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sara-milena-malaver-ospina-b97594389/"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:saramalaver19@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+
+       <div class="hero-visual">
+    <div class="code-window">
+        <div class="window-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+        </div>
+        <div class="code-content">
+            <pre>
+<code><span class="purple">class</span> <span class="blue">Developer</span> {
+  constructor() {
+    <span class="purple">this</span>.name = <span class="green">"Sara Malaver"</span>;
+    <span class="purple">this</span>.role = <span class="green">"Backend Dev"</span>;
+    <span class="purple">this</span>.semester = <span class="orange">6</span>;
+  }
+}</code></pre>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+
+    <section id="habilidades" class="section habilidades">
+      <h2>Habilidades</h2>
+      <div class="skills">
+        <div class="skill"><i class="fab fa-java"></i><span>Java</span></div>
+        <div class="skill"><i class="fab fa-python"></i><span>Python</span></div>
+        <div class="skill"><i class="fab fa-html5"></i><span>HTML</span></div>
+        <div class="skill"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+        <div class="skill"><i class="fab fa-js"></i><span>JavaScript</span></div>
+        <div class="skill"><i class="fas fa-database"></i><span>SQL</span></div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="section proyectos">
+      <h2>Proyectos</h2>
+      <div class="cards">
+        <div class="card" onclick="openProject('bancario')">
+          <div class="card-content">
+            <h3>Sistema Bancario</h3>
+            <p>Sistema bancario desarrollado en Java, con interfaz gráfica, que permite la gestión de clientes y cuentas, realizando operaciones de consignación, retiro y consulta de saldo. El proyecto implementa estructuras de datos como colas con prioridad por edad y pilas para el historial de transacciones, además de consultas y estadísticas basadas en datos personales.</p>
+            <span class="repositorio"><a href="https://github.com/saramalaver19-svg/Banco.git">Repositorio</a></span>
+          </div>
+        </div>
+        <div class="card" onclick="openProject('turismo')">
+          <img src="imagenes/login-turis.png" alt="Agencia de turismo" class="html-css">
+          <div class="card-content">
+            <h3>Gestión Turismo</h3>
+            <p>Aplicación web de gestión turística desarrollada con arquitectura cliente-servidor, que implementa operaciones CRUD, manejo de usuarios con diferentes roles y persistencia de datos en una base de datos relacional, facilitando el control y organización de la información.</p>
+
+
+            <span class="repositorio"><a href="https://github.com/saramalaver19-svg/Agencia-Turismo.git">Repositorio</a></span>
+            <span class="ver-mas">Ver detalles +</span>
+          </div>
+        </div>
+        <div class="card" onclick="openProject('fullstack')">
+            <img src="imagenes/login-angular.png" alt="Animacion Angular" class="Angular">
+          <div class="card-content">
+            <h3>Angular + Spring</h3>
+            <p>Aplicación web con frontend en Angular y backend en Spring Boot, conectados mediante servicios REST, enfocada en la gestión y visualización de información de forma eficiente.</p>
+            <span class="repositorio"><a href="https://github.com/saramalaver19-svg">Repositorio</a></span>
+            <span class="ver-mas">Ver detalles +</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section contacto">
+  <div class="contacto-container">
+    <div class="contacto-info">
+      <h2>¿Tienes un proyecto en mente?</h2>
+      <p>Estoy abierta a nuevas oportunidades y colaboraciones. ¡Hablemos!</p>
+    </div>
+    
+    <div class="contact-card">
+      <div class="contact-method">
+        <a href="mailto:saramalaver19@gmail.com" class="contact-btn email">
+          <i class="fas fa-envelope"></i>
+          <span>Enviame un correo</span>
+        </a>
+      </div>
+      
+      <div class="contact-socials">
+        <a href="https://github.com/saramalaver19-svg" target="_blank" class="social-box github">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/sara-milena-malaver-ospina-b97594389/" target="_blank" class="social-box linkedin">
+          <i class="fab fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </div>
+
+    <p class="footer-text">Diseñado y desarrollado por Sara Malaver &copy; 2026</p>
+  </div>
+</section>
+
+
+  </main>
+
+  <div id="project-overlay" class="overlay">
+    <div class="overlay-content">
+      <span class="close-btn" onclick="closeProject()">&times;</span>
+      <div id="overlay-body"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
